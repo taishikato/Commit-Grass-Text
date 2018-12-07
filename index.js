@@ -16,9 +16,9 @@ const generateRadomInt = () => {
 }
 
 // Context生成
-let image = Canvas.image;
-let canvas = new createCanvas(212, 106);
-let ctx = canvas.getContext('2d');
+let image = Canvas.image
+let canvas = new createCanvas(106, 106)
+let ctx = canvas.getContext('2d')
 
 const createBase = (ctx) => {
 
@@ -49,6 +49,10 @@ const createText = (alphabet, ctx) => {
     alphabets.A(ctx)
   } else if (alphabet === 'B') {
     alphabets.B(ctx)
+  } else if (alphabet === 'C') {
+    alphabets.C(ctx)
+  } else if (alphabet === 'D') {
+    alphabets.D(ctx)
   }
 }
 
@@ -56,9 +60,9 @@ const createText = (alphabet, ctx) => {
 createBase(ctx)
 
 // Aを入れる
-createText('A', ctx)
+createText('D', ctx)
 
 // 書き出し
 canvas.toBuffer((err, buf)=>{
-  fs.writeFile("image.png", buf);
+  fs.writeFile("image.png", buf)
 })
